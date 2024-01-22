@@ -11,7 +11,7 @@ Unpacks the string from **archiver**().
 **Output:** source string (no repeating spaces)  
 
 ## def archiver_with_nums()  
-Archives duplicate characters.  
+Archives duplicate characters with a certain step.  
 **Input:** string    
 **Output:** shorter string  
 
