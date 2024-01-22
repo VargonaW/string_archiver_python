@@ -1,10 +1,10 @@
-def unarchiver_with_nums(string:str):
-    length:int = len(string)
-    result:str = ""
-    i:int= 0 
-    word:str = ""
-    index_of_word:str = 0
-    len_of_word:str = 0
+def unarchiver_with_nums(string: str) -> str:
+    length: int = len(string)
+    result: str = ""
+    i: int = 0 
+    word: str = ""
+    index_of_word: str = 0
+    len_of_word: str = 0
     while i < length:
         if string[i] == "[":
             if string[i+1] == "*":
