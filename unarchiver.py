@@ -1,4 +1,4 @@
-def unarchiver(string:str) -> str:
+def unarchiver(string: str) -> str:
     result: str = ""
     numbers: str = "0123456789"
     first: str = string[0]
