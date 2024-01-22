@@ -1,8 +1,8 @@
-def archiver(string:str):
-    result:str = ""
-    first:str = string[0]
-    counter:int = 1
-    second:str = ""
+def archiver(string: str) -> str:
+    result: str = ""
+    first: str = string[0]
+    counter: int = 1
+    second: str = ""
     if first in "0123456789":
         return ""
     for i in range(1,len(string)):
