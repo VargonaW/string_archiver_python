@@ -1,22 +1,22 @@
-def archiver_with_nums(string:str):
-    DIF_STEP:int = 2 #точность шага (во сколько раз уменьшатся размеры выборок)
-    DIF_I:int = 1 #точность шага (проверка каждой i-той выборки)
-    length:int = len(string) 
-    arr:List[str] = ["0"]*length #соответствует каждому символу строки
-    step:int = length//2 # шаг
-    first:str = "" #выборка для сравнения 
-    second:str = "" #выборка для сравнения 
-    current:int = 0 #индекс текущей выборки
-    i:int = 0 #индекс выборки
+def archiver_with_nums(string: str) -> str:
+    DIF_STEP: int = 2 #точность шага (во сколько раз уменьшатся размеры выборок)
+    DIF_I: int = 1 #точность шага (проверка каждой i-той выборки)
+    length: int = len(string) 
+    arr: List[str] = ["0"]*length #соответствует каждому символу строки
+    step: int = length//2 # шаг
+    first: str = "" #выборка для сравнения 
+    second: str = "" #выборка для сравнения 
+    current: int = 0 #индекс текущей выборки
+    i: int = 0 #индекс выборки
     while step > 5:
         i = 0
         while i + step <= length:
             current = i + step
             if not inner_arr(arr, i, i+step):
-                first = string[i:i+step]
+                first = string[i : i+step]
                 while current + step <= length:
                     if not inner_arr(arr, current, current+step):
-                        second = string[current:current + step]
+                        second = string[current : current+step]
                         if first == second:
                             if not inner_arr(arr, i, i+step):
                                 for j in range(i, i+step):
@@ -46,7 +46,7 @@ def archiver_with_nums(string:str):
     return result
 
 
-def inner_arr(arr, left, right):
+def inner_arr(arr: List[str], left:int, right:int) -> bool:
     for num in range(left, right):
         if arr[num] != "0":
             return True
