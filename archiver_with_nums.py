@@ -26,11 +26,11 @@ def archiver_with_nums(string: str) -> str:
                     current += 1
             i += DIF_I
         step = step//2
-    j:int = 0
-    result:str = ""
-    curren_char:str = "" 
-    index_of_word:int = 0
-    len_of_word:int = 0
+    j: int = 0
+    result: str = ""
+    curren_char: str = "" 
+    index_of_word: int = 0
+    len_of_word: int = 0
     while j < length:
         curren_char = arr[j]
         if curren_char == "0" or curren_char == "1":
@@ -46,7 +46,7 @@ def archiver_with_nums(string: str) -> str:
     return result
 
 
-def inner_arr(arr: List[str], left:int, right:int) -> bool:
+def inner_arr(arr: List[str], left: int, right: int) -> bool:
     for num in range(left, right):
         if arr[num] != "0":
             return True
